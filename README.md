@@ -28,7 +28,7 @@
 ## Installation
 
 ```bash
-git clone <githublink>
+git clone https://github.com/sudo-xyz/discord-badge-spoofer.git
 ```
 
 ```bash
