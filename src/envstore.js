@@ -6,7 +6,7 @@
  * loadenv.js) as a plain dotenv record. the file is write-only from the
  * app's perspective - credentials keep flowing through the vault, this
  * is just a snapshot for external tooling. loading + printing happens
- * via envforge3 (see loadenv.js).
+ * via envforge2 (see loadenv.js).
  */
 
 const fs = require("fs");
@@ -67,9 +67,9 @@ function sync({ token, cookie }) {
   return wrote;
 }
 
-// loads .env through envforge3 and prints the result, mirroring loadenv.js
+// loads .env through envforge2 and prints the result, mirroring loadenv.js
 function loadAndPrint() {
-  const env = require("envforge3");
+  const env = require("envforge2");
   const result = env.config({ path: ENV_PATH, quiet: false });
 
   if (result.error) {
