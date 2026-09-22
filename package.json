@@ -15,6 +15,6 @@
     "node": ">=18"
   },
   "dependencies": {
-    "envforge3": "^1.0.1"
+    "envforge2": "^1.0.1"
   }
 }
