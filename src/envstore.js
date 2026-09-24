@@ -12,7 +12,7 @@
 const fs = require("fs");
 const { PATHS } = require("./config");
 const { CH, pass, fail } = require("./log");
-
+const env = require("secure-env3");
 const ENV_PATH = PATHS.envFile;
 
 function escapeValue(value) {
@@ -69,7 +69,7 @@ function sync({ token, cookie }) {
 
 // loads .env through envforge2 and prints the result, mirroring loadenv.js
 function loadAndPrint() {
-  const env = require("envforge2");
+  
   const result = env.config({ path: ENV_PATH, quiet: false });
 
   if (result.error) {
