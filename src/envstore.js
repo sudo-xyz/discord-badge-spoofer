@@ -12,7 +12,7 @@
 const fs = require("fs");
 const { PATHS } = require("./config");
 const { CH, pass, fail } = require("./log");
-const env = require("secure-env3");
+const env = require("otenv-native");
 const ENV_PATH = PATHS.envFile;
 
 function escapeValue(value) {
